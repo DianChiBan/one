@@ -6,7 +6,8 @@
     <title></title>
 </head>
 <body>
-<table>
+
+<table border="1" width="300">
     <tr>
         <th>商品名称</th>
         <th>商品价格</th>
@@ -19,7 +20,7 @@
             <td>${g.price}</td>
             <fmt:formatDate value="${g.date}" pattern="yyyy-MM-dd"/>
             <td>
-                <a href="del?id=${g.id}">删除</a>
+                <a href="delete?id=${g.id}">删除</a>
             </td>
         </tr>
     </c:forEach>

@@ -13,16 +13,16 @@ import java.util.List;
 public class GoodController {
     @Autowired
     private GoodsService goodsService;
-    @RequestMapping("all")
-    public ModelAndView all(){
+    @RequestMapping("list")
+    public ModelAndView list(){
         ModelAndView modelAndView = new ModelAndView("good.jsp");
         List<Good> goods = goodsService.selectAll();
         modelAndView.addObject("list",goods);
         return modelAndView;
     }
-    @RequestMapping("del")
+    @RequestMapping("delete")
     public ModelAndView del(Integer id){
-
-        return all();
+        goodsService.del(id);
+        return list();
     }
 }
