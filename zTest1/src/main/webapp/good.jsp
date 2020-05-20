@@ -18,7 +18,9 @@
         <tr>
             <td>${g.name}</td>
             <td>${g.price}</td>
-            <fmt:formatDate value="${g.date}" pattern="yyyy-MM-dd"/>
+            <td>
+                <fmt:formatDate type="date" value="${g.date}" />
+            </td>
             <td>
                 <a href="delete?id=${g.id}">删除</a>
             </td>
